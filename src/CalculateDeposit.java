@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
     public class CalculateDeposit {
-        double calculateComplexPercentFunction(double a, double y, int d) {
+        double calculateComplexPercentFunction(double amount, double yearRate, int depositTеrm) {
 
-            double pay = a * Math.pow((1 + y / 12), 12 * d);
+            double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositTеrm);
             return round(pay, 2);
         }
 
-        double calculateSimplePercentFunction(double doubleAmount, double doubleYearRate, int depositTеrm) {
-            return round (doubleAmount + doubleAmount * doubleYearRate * depositTеrm, 2);
+        double calculateSimplePercentFunction(double doubleAmount, double yearRate, int depositTеrm) {
+            return round (doubleAmount + doubleAmount * yearRate * depositTеrm, 2);
         }
 
         double round(double value,int places) {
